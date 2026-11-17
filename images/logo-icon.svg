@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Biswas Bike Rent logo icon: green badge, red sun, white bicycle -->
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#006a4e"/>
+  <circle cx="34" cy="24" r="11" fill="#f42a41"/>
+  <g fill="none" stroke="#ffffff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="17" cy="44" r="9"/>
+    <circle cx="47" cy="44" r="9"/>
+    <path d="M17 44 L28 44 L23 31 M28 44 L40 31 L23 31 M40 31 L47 44"/>
+    <path d="M20 29 L27 29"/>
+    <path d="M40 31 L38 25 L43 24"/>
+  </g>
+</svg>

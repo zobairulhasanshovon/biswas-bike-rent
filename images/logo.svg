@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 72" width="300" height="72">
+  <!-- Full logo: icon + name. Used in README and printouts -->
+  <g transform="translate(4,4)">
+    <rect x="0" y="0" width="64" height="64" rx="15" fill="#006a4e"/>
+    <circle cx="34" cy="23" r="12" fill="#f42a41"/>
+    <g fill="none" stroke="#ffffff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="16" cy="44" r="10"/>
+      <circle cx="48" cy="44" r="10"/>
+      <path d="M16 44 L28 44 L23 30 M28 44 L41 30 L23 30 M41 30 L48 44"/>
+      <path d="M19 28 L27 28"/>
+      <path d="M41 30 L39 24 L44 23"/>
+    </g>
+  </g>
+  <text x="82" y="38" font-family="Segoe UI, Roboto, Arial, sans-serif" font-size="30" font-weight="800" fill="#1f2937">Biswas</text>
+  <text x="84" y="60" font-family="Segoe UI, Roboto, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="4" fill="#006a4e">BIKE RENT</text>
+</svg>
