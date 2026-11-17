@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="All bikes for rent at Biswas Bike Rent">
+  <title>Bikes | Biswas Bike Rent</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo-icon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Header (same on every page) ===== -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">
+        <img src="images/logo-icon.svg" alt="Biswas Bike Rent logo">
+        <span>Biswas <b>Bike Rent</b></span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">&#9776;</button>
+      <nav id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="bikes.html">Bikes</a>
+        <a href="rent.html">Rent a Bike</a>
+        <a href="my-rentals.html">My Rentals</a>
+        <a href="contact.html">Contact</a>
+        <span id="navUser"></span>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-head">
+    <div class="container">
+      <h1>Our Bikes</h1>
+      <p>Search, filter and pick the ride that suits you.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- Filters -->
+      <div class="filter-bar">
+        <input type="text" id="searchBox" placeholder="Search by name or brand, e.g. Yamaha">
+        <select id="typeFilter">
+          <option value="">All types</option>
+          <option value="Motorbike">Motorbike</option>
+          <option value="Scooter">Scooter</option>
+          <option value="Bicycle">Bicycle</option>
+        </select>
+        <select id="branchFilter">
+          <option value="">All branches</option>
+        </select>
+        <select id="sortBy">
+          <option value="">Sort: Default</option>
+          <option value="low">Price: Low to High</option>
+          <option value="high">Price: High to Low</option>
+          <option value="name">Name: A to Z</option>
+        </select>
+        <label class="check-row"><input type="checkbox" id="availableOnly"> Available only</label>
+      </div>
+
+      <p class="muted" id="resultCount" style="margin-bottom:14px;"></p>
+      <div class="grid-3" id="bikeList"></div>
+
+    </div>
+  </section>
+
+  <!-- ===== Footer (same on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Biswas Bike Rent</h4>
+          <p>Motorbikes, scooters and bicycles for rent across Dhaka. Book online, pick up at your nearest branch.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a href="bikes.html">All Bikes</a>
+          <a href="rent.html">Rent a Bike</a>
+          <a href="my-rentals.html">My Rentals</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>Kuratoli, Dhaka 1229<br>Phone: 01700-000000</p>
+          <a href="mailto:info@biswasbike.com">info@biswasbike.com</a>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; <span id="year">2026</span> Biswas Bike Rent &bull; Web Technologies Group Project, AIUB</div>
+    </div>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/bikes.js"></script>
+</body>
+</html>
