@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Biswas Bike Rent - rent motorbikes, scooters and bicycles in Dhaka">
+  <title>Home | Biswas Bike Rent</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo-icon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Header (same on every page) ===== -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">
+        <img src="images/logo-icon.svg" alt="Biswas Bike Rent logo">
+        <span>Biswas <b>Bike Rent</b></span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">&#9776;</button>
+      <nav id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="bikes.html">Bikes</a>
+        <a href="rent.html">Rent a Bike</a>
+        <a href="my-rentals.html">My Rentals</a>
+        <a href="contact.html">Contact</a>
+        <span id="navUser"></span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Hero section ===== -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <h1>Ride Dhaka your way with <span>Biswas Bike Rent</span></h1>
+        <p>Motorbikes, scooters and bicycles from &#2547;200 a day. Book online in 2 minutes and pick up at any of our 5 branches.</p>
+        <div class="hero-buttons">
+          <a href="bikes.html" class="btn btn-white">Browse Bikes</a>
+          <a href="rent.html" class="btn btn-red">Rent Now</a>
+        </div>
+
+        <!-- Quick search: sends the visitor to bikes.html?type=... -->
+        <form class="quick-search" id="quickSearch">
+          <select id="quickType">
+            <option value="">All bike types</option>
+            <option value="Motorbike">Motorbike</option>
+            <option value="Scooter">Scooter</option>
+            <option value="Bicycle">Bicycle</option>
+          </select>
+          <button type="submit" class="btn">Search</button>
+        </form>
+      </div>
+      <div class="hero-art" id="heroArt"></div>
+    </div>
+  </section>
+
+  <!-- ===== Live numbers (filled by home.js) ===== -->
+  <div class="container">
+    <div class="stats-row">
+      <div class="stat-box"><h3 id="statBikes">0</h3><p>Bikes in our fleet</p></div>
+      <div class="stat-box"><h3 id="statAvailable">0</h3><p>Available right now</p></div>
+      <div class="stat-box"><h3 id="statBranches">0</h3><p>Branches in Dhaka</p></div>
+      <div class="stat-box"><h3 id="statRiders">0</h3><p>Happy riders</p></div>
+    </div>
+  </div>
+
+  <!-- ===== How it works ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>How it works</h2>
+        <p>Three steps from choosing a bike to riding it</p>
+      </div>
+      <div class="grid-3">
+        <div class="card step">
+          <div class="step-num">1</div>
+          <h3>Choose a bike</h3>
+          <p class="muted">Filter by type, price and branch. Every bike shows its daily rate.</p>
+        </div>
+        <div class="card step">
+          <div class="step-num">2</div>
+          <h3>Book online</h3>
+          <p class="muted">Pick your dates, add a helmet, pay by Cash, bKash, Nagad or card.</p>
+        </div>
+        <div class="card step">
+          <div class="step-num">3</div>
+          <h3>Pick up and ride</h3>
+          <p class="muted">Show your NID (and license for motorbikes) at the branch and ride away.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Featured bikes (filled by home.js) ===== -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="section-title">
+        <h2>Popular bikes</h2>
+        <p>One pick from each category</p>
+      </div>
+      <div class="grid-3" id="featuredBikes"></div>
+      <p style="text-align:center; margin-top:24px;">
+        <a href="bikes.html" class="btn btn-outline">See all bikes</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== Why choose us ===== -->
+  <section class="section" style="background:#fff;">
+    <div class="container">
+      <div class="section-title">
+        <h2>Why ride with us</h2>
+      </div>
+      <div class="grid-4">
+        <div class="feature"><div class="icon">&#128176;</div><h3>Fair prices</h3><p class="muted">10% off when you rent for 7 days or more.</p></div>
+        <div class="feature"><div class="icon">&#128295;</div><h3>Serviced bikes</h3><p class="muted">Every bike is checked after each rental.</p></div>
+        <div class="feature"><div class="icon">&#9937;&#65039;</div><h3>Helmet included</h3><p class="muted">Add a clean helmet for only &#2547;100.</p></div>
+        <div class="feature"><div class="icon">&#128205;</div><h3>5 branches</h3><p class="muted">Kuratoli, Bashundhara, Uttara, Dhanmondi, Mirpur.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Call to action ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="cta">
+        <h2>New to Biswas Bike Rent?</h2>
+        <p>Create a free account and book your first ride today.</p>
+        <a href="register.html" class="btn btn-white">Create Account</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer (same on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Biswas Bike Rent</h4>
+          <p>Motorbikes, scooters and bicycles for rent across Dhaka. Book online, pick up at your nearest branch.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a href="bikes.html">All Bikes</a>
+          <a href="rent.html">Rent a Bike</a>
+          <a href="my-rentals.html">My Rentals</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>Kuratoli, Dhaka 1229<br>Phone: 01700-000000</p>
+          <a href="mailto:info@biswasbike.com">info@biswasbike.com</a>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; <span id="year">2026</span> Biswas Bike Rent &bull; Web Technologies Group Project, AIUB</div>
+    </div>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
