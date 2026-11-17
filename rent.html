@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Book a bike at Biswas Bike Rent">
+  <title>Rent a Bike | Biswas Bike Rent</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo-icon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Header (same on every page) ===== -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">
+        <img src="images/logo-icon.svg" alt="Biswas Bike Rent logo">
+        <span>Biswas <b>Bike Rent</b></span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">&#9776;</button>
+      <nav id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="bikes.html">Bikes</a>
+        <a href="rent.html">Rent a Bike</a>
+        <a href="my-rentals.html">My Rentals</a>
+        <a href="contact.html">Contact</a>
+        <span id="navUser"></span>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-head">
+    <div class="container">
+      <h1>Rent a Bike</h1>
+      <p>Fill in the form. The price updates as you type.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container rent-layout">
+
+      <!-- Booking form (checked by validateRentForm() in rent.js) -->
+      <form class="card" id="rentForm" novalidate>
+        <h2 style="margin-bottom:16px;">Booking details</h2>
+        <div class="form-grid">
+
+          <div class="field full">
+            <label for="bikeSelect">Choose a bike *</label>
+            <select id="bikeSelect"></select>
+            <div class="error-msg" id="bikeSelectError"></div>
+          </div>
+
+          <div class="field">
+            <label for="customerName">Full name *</label>
+            <input type="text" id="customerName" placeholder="e.g. Rahim Uddin">
+            <div class="error-msg" id="customerNameError"></div>
+          </div>
+
+          <div class="field">
+            <label for="phone">Mobile number *</label>
+            <input type="text" id="phone" placeholder="01XXXXXXXXX" maxlength="11">
+            <div class="error-msg" id="phoneError"></div>
+          </div>
+
+          <div class="field">
+            <label for="nid">NID number *</label>
+            <input type="text" id="nid" placeholder="10, 13 or 17 digits" maxlength="17">
+            <div class="error-msg" id="nidError"></div>
+          </div>
+
+          <div class="field" id="licenseField">
+            <label for="license">Driving license no. *</label>
+            <input type="text" id="license" placeholder="e.g. DK0123456789">
+            <div class="error-msg" id="licenseError"></div>
+          </div>
+
+          <div class="field">
+            <label for="startDate">Pick-up date *</label>
+            <input type="date" id="startDate">
+            <div class="error-msg" id="startDateError"></div>
+          </div>
+
+          <div class="field">
+            <label for="endDate">Return date *</label>
+            <input type="date" id="endDate">
+            <div class="error-msg" id="endDateError"></div>
+          </div>
+
+          <div class="field full" id="helmetField">
+            <label class="check-row"><input type="checkbox" id="helmet"> Add a helmet (&#2547;100 for the whole rental)</label>
+          </div>
+
+          <div class="field full">
+            <label>Payment method *</label>
+            <div class="check-row" style="flex-wrap:wrap; gap:16px;">
+              <label class="check-row"><input type="radio" name="payment" value="Cash"> Cash at pick-up</label>
+              <label class="check-row"><input type="radio" name="payment" value="bKash"> bKash</label>
+              <label class="check-row"><input type="radio" name="payment" value="Nagad"> Nagad</label>
+              <label class="check-row"><input type="radio" name="payment" value="Card"> Card</label>
+            </div>
+            <div class="error-msg" id="paymentError"></div>
+          </div>
+
+          <div class="field full">
+            <label class="check-row"><input type="checkbox" id="terms"> I agree to return the bike on time and pay for any damage.</label>
+            <div class="error-msg" id="termsError"></div>
+          </div>
+
+          <div class="field full">
+            <button type="submit" class="btn btn-block">Confirm Booking</button>
+          </div>
+        </div>
+      </form>
+
+      <!-- Live price summary (filled by updateSummary() in rent.js) -->
+      <aside class="card summary">
+        <div id="bikePreview"></div>
+        <h3 style="margin:10px 0;">Price summary</h3>
+        <div class="summary-row"><span>Rate</span><span id="sumRate">-</span></div>
+        <div class="summary-row"><span>Days</span><span id="sumDays">-</span></div>
+        <div class="summary-row"><span>Rent</span><span id="sumRent">-</span></div>
+        <div class="summary-row"><span>Helmet</span><span id="sumHelmet">&#2547;0</span></div>
+        <div class="summary-row"><span>Long-rent discount</span><span id="sumDiscount">&#2547;0</span></div>
+        <div class="summary-row total"><span>Total</span><span id="sumTotal">&#2547;0</span></div>
+        <p class="muted" style="font-size:13px; margin-top:8px;">
+          Refundable security deposit at pick-up: <b id="sumDeposit">-</b><br>
+          Rent 7 days or more and get 10% off.
+        </p>
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- ===== Footer (same on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Biswas Bike Rent</h4>
+          <p>Motorbikes, scooters and bicycles for rent across Dhaka. Book online, pick up at your nearest branch.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a href="bikes.html">All Bikes</a>
+          <a href="rent.html">Rent a Bike</a>
+          <a href="my-rentals.html">My Rentals</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>Kuratoli, Dhaka 1229<br>Phone: 01700-000000</p>
+          <a href="mailto:info@biswasbike.com">info@biswasbike.com</a>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; <span id="year">2026</span> Biswas Bike Rent &bull; Web Technologies Group Project, AIUB</div>
+    </div>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/rent.js"></script>
+</body>
+</html>
