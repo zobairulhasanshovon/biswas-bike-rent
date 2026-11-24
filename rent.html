@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rent a Bike | Biswas Bike Rent</title>
+  <link rel="icon" href="images/logo-icon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header (same on every page) -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="images/logo-icon.svg" alt="Logo"> Biswas Bike Rent</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="bikes.html">Bikes</a>
+        <a href="rent.html" class="active">Rent a Bike</a>
+        <a href="contact.html">Contact</a>
+        <span id="navUser"></span>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-title">
+    <div class="container">
+      <h1>Rent a Bike</h1>
+      <p>Fill in the form to book your bike.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container two-columns">
+
+      <!-- Booking form -->
+      <form class="form-box" onsubmit="return bookBike()">
+        <h2>Booking Form</h2>
+
+        <label for="bike">Choose a bike</label>
+        <select id="bike" onchange="showPrice()"></select>
+
+        <label for="name">Full name</label>
+        <input type="text" id="name">
+
+        <label for="phone">Mobile number</label>
+        <input type="text" id="phone" placeholder="01XXXXXXXXX">
+
+        <label for="startDate">Pick-up date</label>
+        <input type="date" id="startDate" onchange="showPrice()">
+
+        <label for="endDate">Return date</label>
+        <input type="date" id="endDate" onchange="showPrice()">
+
+        <label for="payment">Payment method</label>
+        <select id="payment">
+          <option value="">-- Select --</option>
+          <option>Cash</option>
+          <option>bKash</option>
+          <option>Nagad</option>
+        </select>
+
+        <input type="submit" value="Confirm Booking" class="btn">
+      </form>
+
+      <!-- Price (filled by showPrice() in rent.js) -->
+      <div class="form-box">
+        <h2>Price</h2>
+        <div class="row"><span>Price per day</span><span id="pricePerDay">0</span></div>
+        <div class="row"><span>Days</span><span id="days">0</span></div>
+        <div class="row total"><span>Total (Taka)</span><span id="total">0</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer (same on every page) -->
+  <footer class="footer">
+    <p>Biswas Bike Rent &bull; Kuratoli, Dhaka &bull; 01700-000000</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/rent.js"></script>
+</body>
+</html>
