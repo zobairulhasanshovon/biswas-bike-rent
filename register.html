@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register | Biswas Bike Rent</title>
+  <link rel="icon" href="images/logo-icon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header (same on every page) -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="images/logo-icon.svg" alt="Logo"> Biswas Bike Rent</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="bikes.html">Bikes</a>
+        <a href="rent.html">Rent a Bike</a>
+        <a href="contact.html">Contact</a>
+        <span id="navUser"></span>
+      </nav>
+    </div>
+  </header>
+
+  <form class="form-box small-form" onsubmit="return register()">
+    <h2>Create an Account</h2>
+
+    <label for="regName">Full name</label>
+    <input type="text" id="regName">
+
+    <label for="regEmail">Email</label>
+    <input type="email" id="regEmail">
+
+    <label for="regPhone">Mobile number</label>
+    <input type="text" id="regPhone" placeholder="01XXXXXXXXX">
+
+    <label for="regPassword">Password</label>
+    <input type="password" id="regPassword" placeholder="At least 6 characters">
+
+    <label for="regConfirm">Confirm password</label>
+    <input type="password" id="regConfirm">
+
+    <input type="submit" value="Register" class="btn">
+    <p><br>Already have an account? <a href="login.html">Login</a></p>
+  </form>
+
+  <!-- Footer (same on every page) -->
+  <footer class="footer">
+    <p>Biswas Bike Rent &bull; Kuratoli, Dhaka &bull; 01700-000000</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
