@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Biswas Bike Rent</title>
+  <link rel="icon" href="images/logo-icon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header (same on every page) -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="images/logo-icon.svg" alt="Logo"> Biswas Bike Rent</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="bikes.html">Bikes</a>
+        <a href="rent.html">Rent a Bike</a>
+        <a href="contact.html" class="active">Contact</a>
+        <span id="navUser"></span>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-title">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Have a question? Send us a message.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container two-columns">
+
+      <!-- Contact form: checked by sendMessage() in contact.js -->
+      <form class="form-box" id="contactForm" onsubmit="return sendMessage()">
+        <h2>Send a Message</h2>
+
+        <label for="cName">Your name</label>
+        <input type="text" id="cName">
+
+        <label for="cEmail">Email</label>
+        <input type="email" id="cEmail">
+
+        <label for="cMessage">Message</label>
+        <textarea id="cMessage" rows="5"></textarea>
+
+        <input type="submit" value="Send" class="btn">
+      </form>
+
+      <!-- Shop information -->
+      <div class="form-box">
+        <img src="images/logo.svg" alt="Biswas Bike Rent logo" width="220">
+        <p><b>Phone:</b> 01700-000000</p>
+        <p><b>Email:</b> info@biswasbike.com</p>
+        <p><b>Open:</b> Every day, 8 AM to 10 PM</p>
+        <p><b>Branches:</b></p>
+        <ul>
+          <li>Kuratoli</li>
+          <li>Bashundhara</li>
+          <li>Uttara</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer (same on every page) -->
+  <footer class="footer">
+    <p>Biswas Bike Rent &bull; Kuratoli, Dhaka &bull; 01700-000000</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
