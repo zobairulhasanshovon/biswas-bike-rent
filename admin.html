@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin | Biswas Bike Rent</title>
+  <link rel="icon" href="images/logo-icon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header (same on every page) -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="images/logo-icon.svg" alt="Logo"> Biswas Bike Rent</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="bikes.html">Bikes</a>
+        <a href="rent.html">Rent a Bike</a>
+        <a href="contact.html">Contact</a>
+        <span id="navUser"></span>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-title">
+    <div class="container">
+      <h1>Admin Dashboard</h1>
+      <p>Manage the bikes and the bookings.</p>
+    </div>
+  </div>
+
+  <!-- Numbers (filled by admin.js) -->
+  <section class="section">
+    <div class="container boxes">
+      <div class="box"><h2 id="totalBikes">0</h2><p>Total bikes</p></div>
+      <div class="box"><h2 id="availableBikes">0</h2><p>Available</p></div>
+      <div class="box"><h2 id="rentedBikes">0</h2><p>Rented</p></div>
+      <div class="box"><h2 id="totalBookings">0</h2><p>Bookings</p></div>
+      <div class="box"><h2 id="income">0</h2><p>Income (Taka)</p></div>
+    </div>
+  </section>
+
+  <!-- Bikes -->
+  <section class="section">
+    <div class="container">
+      <h2>Bikes</h2>
+      <table>
+        <tr><th>ID</th><th>Bike</th><th>Engine</th><th>Branch</th><th>Price / day</th><th>Status</th><th>Action</th></tr>
+        <tbody id="bikeTable"></tbody>
+      </table>
+
+      <!-- Add bike form -->
+      <form class="form-box" style="margin-top:20px;" onsubmit="return addBike()">
+        <h3>Add a New Bike</h3>
+        <label for="newName">Bike name</label>
+        <input type="text" id="newName">
+        <label for="newCc">Engine (cc)</label>
+        <input type="number" id="newCc">
+        <label for="newPrice">Price per day (Taka)</label>
+        <input type="number" id="newPrice">
+        <label for="newBranch">Branch</label>
+        <select id="newBranch">
+          <option>Kuratoli</option>
+          <option>Bashundhara</option>
+          <option>Uttara</option>
+        </select>
+        <input type="submit" value="Add Bike" class="btn">
+      </form>
+    </div>
+  </section>
+
+  <!-- Bookings -->
+  <section class="section">
+    <div class="container">
+      <h2>Bookings</h2>
+      <table>
+        <tr><th>ID</th><th>Customer</th><th>Phone</th><th>Bike</th><th>Pick-up</th><th>Return</th><th>Total</th><th>Payment</th><th>Status</th><th>Action</th></tr>
+        <tbody id="bookingTable"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Footer (same on every page) -->
+  <footer class="footer">
+    <p>Biswas Bike Rent &bull; Kuratoli, Dhaka &bull; 01700-000000</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
