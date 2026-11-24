@@ -1,0 +1,360 @@
+/* ----- Universal selector: reset ----- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* width includes padding and border */
+}
+
+/* ----- Element selectors ----- */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f6f8f7;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+a {
+  color: #006a4e;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  margin-bottom: 10px;
+}
+
+/* ----- Layout ----- */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 40px 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.muted {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* ----- Header and navigation bar ----- */
+.header {
+  position: sticky; /* stays at the top while scrolling */
+  top: 0;
+  z-index: 10; /* stays above the page content */
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 12px 0;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.logo img {
+  width: 40px;
+}
+
+.nav a {
+  color: #1f2937;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+.nav a:hover,
+.nav a.active {
+  background-color: #e6f2ee;
+  color: #006a4e;
+}
+
+#navUser {
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+/* ----- Buttons ----- */
+.btn {
+  display: inline-block;
+  background-color: #006a4e;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #004d38;
+}
+
+.btn-red {
+  background-color: #f42a41;
+}
+
+.btn-red:hover {
+  background-color: #c81d31;
+}
+
+.btn-white {
+  background-color: white;
+  color: #006a4e;
+}
+
+.btn-white:hover {
+  background-color: #e6f2ee;
+}
+
+.btn-small {
+  padding: 5px 10px;
+  font-size: 13px;
+}
+
+/* ----- Home page ----- */
+.hero {
+  background-color: #006a4e;
+  color: white;
+  padding: 60px 0;
+}
+
+.hero .container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero h1 {
+  font-size: 40px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.hero img {
+  width: 420px;
+  background-color: white;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+/* ----- Page title band ----- */
+.page-title {
+  background-color: #006a4e;
+  color: white;
+  padding: 30px 0;
+}
+
+/* ----- Boxes for numbers ----- */
+.boxes {
+  display: flex;
+  gap: 20px;
+}
+
+.box {
+  flex: 1;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.box h2 {
+  color: #006a4e;
+  font-size: 30px;
+  margin-bottom: 0;
+}
+
+/* ----- Bike cards ----- */
+.bike-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%; /* 3 cards of 32% + 2 gaps of 2% = 100% */
+  row-gap: 20px;
+}
+
+.bike-card {
+  position: relative; /* so the label can be placed inside it */
+  width: 32%;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.bike-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover; /* fill the box without stretching the photo */
+  border-radius: 8px;
+}
+
+.bike-card .label {
+  position: absolute; /* top right corner of the card */
+  top: 30px;
+  right: 30px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #006a4e;
+  margin-bottom: 10px;
+}
+
+/* ----- Status labels ----- */
+.label {
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.green {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.red {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+/* ----- Forms ----- */
+.form-box {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.small-form {
+  max-width: 420px;
+  margin: 40px auto;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 9px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 15px;
+  margin-top: 4px;
+}
+
+form .btn {
+  margin-top: 18px;
+}
+
+.note {
+  background-color: #e6f2ee;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* ----- Booking page: form on the left, price on the right ----- */
+.two-columns {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+}
+
+.two-columns .form-box:first-child {
+  flex: 2;
+}
+
+.two-columns .form-box:last-child {
+  flex: 1;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed #e5e7eb;
+  padding: 8px 0;
+}
+
+.total {
+  font-size: 20px;
+  font-weight: bold;
+  color: #006a4e;
+}
+
+/* ----- Tables ----- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #e5e7eb;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #e6f2ee;
+}
+
+/* ----- Footer ----- */
+.footer {
+  background-color: #111827;
+  color: #d1d5db;
+  text-align: center;
+  padding: 25px 0;
+  margin-top: 40px;
+}
+
+/* ----- Small screens (phones) ----- */
+@media (max-width: 800px) {
+  .header .container,
+  .hero .container,
+  .boxes,
+  .two-columns {
+    flex-direction: column;
+  }
+
+  .hero img {
+    width: 100%;
+  }
+
+  .bike-card {
+    width: 100%;
+  }
+}

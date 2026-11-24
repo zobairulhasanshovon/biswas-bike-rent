@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 115" width="200" height="115">
+  <!-- Motorbike picture. You can replace it later with a real photo. -->
+  <circle cx="46" cy="84" r="24" fill="#ffffff" stroke="#1f2937" stroke-width="9"/>
+  <circle cx="158" cy="84" r="24" fill="#ffffff" stroke="#1f2937" stroke-width="9"/>
+  <path d="M46 84 L96 70" stroke="#4b5563" stroke-width="6"/>
+  <path d="M158 84 L140 38" stroke="#6b7280" stroke-width="7"/>
+  <rect x="84" y="60" width="38" height="24" rx="5" fill="#4b5563"/>
+  <path d="M70 82 L30 74" stroke="#9ca3af" stroke-width="6" stroke-linecap="round"/>
+  <path d="M94 46 Q116 30 142 40 L134 62 L96 64 Z" fill="#f42a41"/>
+  <path d="M56 50 L98 45 L98 56 L62 60 Z" fill="#111827"/>
+  <path d="M34 54 L58 48 L62 60 L40 64 Z" fill="#f42a41"/>
+  <path d="M140 38 L128 28" stroke="#1f2937" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="150" cy="46" r="6" fill="#fbbf24"/>
+</svg>

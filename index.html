@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | Biswas Bike Rent</title>
+  <link rel="icon" href="images/logo-icon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header (same on every page) -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="images/logo-icon.svg" alt="Logo"> Biswas Bike Rent</a>
+      <nav class="nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="bikes.html">Bikes</a>
+        <a href="rent.html">Rent a Bike</a>
+        <a href="contact.html">Contact</a>
+        <span id="navUser"></span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero section -->
+  <section class="hero">
+    <div class="container">
+      <div>
+        <h1>Ride Dhaka with Biswas Bike Rent</h1>
+        <p>Rent a motorbike from &#2547;1400 a day. Book online and pick it up from our branch.</p>
+        <a href="bikes.html" class="btn btn-white">See Our Bikes</a>
+        <a href="rent.html" class="btn btn-red">Rent Now</a>
+      </div>
+      <img src="images/bike.svg" alt="Motorbike">
+    </div>
+  </section>
+
+  <!-- Numbers (filled by home.js) -->
+  <section class="section">
+    <div class="container boxes">
+      <div class="box"><h2 id="totalBikes">0</h2><p>Bikes in our shop</p></div>
+      <div class="box"><h2 id="availableBikes">0</h2><p>Available now</p></div>
+      <div class="box"><h2>3</h2><p>Branches in Dhaka</p></div>
+      <div class="box"><h2 id="totalBookings">0</h2><p>Total bookings</p></div>
+    </div>
+  </section>
+
+  <!-- Popular bikes (filled by home.js) -->
+  <section class="section">
+    <div class="container">
+      <h2 class="center">Popular Bikes</h2><br>
+      <div class="bike-list" id="popularBikes"></div>
+    </div>
+  </section>
+
+  <!-- Footer (same on every page) -->
+  <footer class="footer">
+    <p>Biswas Bike Rent &bull; Kuratoli, Dhaka &bull; 01700-000000</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
